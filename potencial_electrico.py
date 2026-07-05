@@ -19,7 +19,7 @@ cargas = [
 ]
 
 # ==========================================
-# PASO 2 y 3: GRILLA Y CÁLCULO DEL POTENCIAL
+# PASO 2: CREACIÓN DE LA GRILLA
 # ==========================================
 # Creamos una malla (grilla) de puntos en el plano x,y. 
 # Ajustamos el límite a 2.0 para darle respiro visual a las cargas separadas por 1.5m
@@ -28,6 +28,9 @@ x = np.linspace(-limit, limit, 300)
 y = np.linspace(-limit, limit, 300)
 X, Y = np.meshgrid(x, y)
 
+# ==========================================
+# PASO 3: CÁLCULO DEL POTENCIAL
+# ==========================================
 # Inicializamos el potencial total en cero
 V_total = np.zeros(X.shape)
 
